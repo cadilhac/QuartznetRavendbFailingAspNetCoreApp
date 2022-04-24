@@ -17,3 +17,7 @@ To fix it, comment out the job setup and uncomment this line:
 ```
 
 This defers the job creation just after the initial setup. Run the app. It now works and the job is functional.
+
+## Another bug
+
+There is also another bug that can be showcased. In SampleJob.cs, uncomment a line to enable the DisallowConcurrentExecution attribute. Run the app. The job will never be fired.
