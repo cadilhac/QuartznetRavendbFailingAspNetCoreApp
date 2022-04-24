@@ -20,7 +20,7 @@ This defers the job creation just after the initial setup. Run the app. It now w
 
 ## On Linux
 
-Using the OnStarted handler to create jobs runs fine on my windows dev machine. But when I publish this app on a Linux server, I get this exception and the job is not create:
+Using the OnStarted handler to create jobs runs fine on my windows dev machine. But when I publish this app on a Linux server, I get this exception and the job is not created:
 
 > Runtime error occurred in main trigger firing loop.
 >      System.NotSupportedException: You can't query sync from an async session
