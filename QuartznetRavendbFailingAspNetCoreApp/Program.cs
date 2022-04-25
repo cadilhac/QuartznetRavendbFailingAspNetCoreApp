@@ -25,12 +25,12 @@ builder.Services.AddQuartz(q =>
     });
 
     // Comment out these lines and uncomment app.Lifetime.ApplicationStarted.Register(OnStarted); to make it work
-    q.AddJob<SampleJob>(j => j.WithIdentity("SampleJob"));
+/*    q.AddJob<SampleJob>(j => j.WithIdentity("SampleJob"));
     q.AddTrigger(t => t
         .WithIdentity("SampleTrigger")
         .ForJob("SampleJob")
         .WithSchedule(CronScheduleBuilder.DailyAtHourAndMinute(4, 0).InTimeZone(TimeZoneInfo.Utc))
-    );
+    );*/
 });
 
 // Add the Quartz.NET hosted service
@@ -51,7 +51,7 @@ app.UseAuthorization();
 
 app.MapRazorPages();
 
-//app.Lifetime.ApplicationStarted.Register(OnStarted);
+app.Lifetime.ApplicationStarted.Register(OnStarted);
 
 void OnStarted()
 {
